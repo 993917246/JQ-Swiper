@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2286813 */
+  src: url('//at.alicdn.com/t/font_2286813_bfx054p8qr.eot');
+  src: url('//at.alicdn.com/t/font_2286813_bfx054p8qr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2286813_bfx054p8qr.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2286813_bfx054p8qr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2286813_bfx054p8qr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2286813_bfx054p8qr.svg#iconfont') format('svg');
+}
+
+#swiper {
+  overflow: hidden;
+  position: relative;
+}
+
+#swiper ul:nth-of-type(1) {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#swiper ul:nth-of-type(1) li {
+  box-sizing: border-box;
+  float: left;
+}
+#swiper ul:nth-of-type(1) li.fade{
+  position: absolute;
+}
+
+
+#swiper .swiperBtn {
+  font-family: 'iconfont' ;
+  position: absolute;
+  display: flex;
+  top: calc(50% - 15px);
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-between;
+  left: 0px;
+  right: 0px;
+}
+#swiper:hover .btn {
+  opacity: .2;
+}
+#swiper .btn {
+  color: #FFF;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 30px;
+  opacity: 0;
+}
+#swiper .left {
+  border-radius: 0 50% 50% 0;
+}
+#swiper .right {
+  border-radius: 50% 0 0 50%;
+}
+
+
+/* 下方小圆点 */
+#swiper .spots {
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+#swiper .spots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  opacity: .5;
+  margin-right: 5px;
+}
+#swiper .spots span.active {
+  opacity: 1;
+  box-shadow: 0 0 5px 2px #fff;
+}

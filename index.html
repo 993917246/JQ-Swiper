@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./swiper.css">
+</head>
+<body>
+  <style>
+    .item1 {
+      background-color: #f00;
+    }
+    .item2 {
+      background-color: #ff0;
+    }
+    .item3 {
+      background-color: #00f;
+    }
+    .item4 {
+      background-color: #0ff;
+    }
+    .item5 {
+      background-color: #f0f;
+    }
+  </style>
+
+
+
+  <!-- 轮播图中必须用ul结构 -->
+  <!-- li里面的内容要自己调大小哦！！！ -->
+  <div id="swiper">
+    <ul>
+      <li class="item1 ">1</li>
+      <li class="item2 ">2</li>
+      <li class="item3 ">3</li>
+      <li class="item4 ">4</li>
+      <li class="item3 ">5</li>
+      <li class="item2 ">6</li>
+      <li class="item5 ">7</li>
+    </ul>
+    <!-- <div class="swiperBtn">
+      <div class="btn left">&#xe610;</div>
+      <div class="btn right">&#xe64a;</div>
+    </div> -->
+    <!-- <div class="spots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> -->
+  </div>
+
+  <script src="./jquery.js"></script>
+  <script src="./swiper.js"></script>
+  <script>
+    $('#swiper').swiper({
+      width : 700,  //轮播图宽度
+      height : 300, //轮播图高度
+      timer : 2000,  //轮播时间
+      showSpots : true,  //下方原点是否显示
+      type : 'animate', //轮播方式  animate(滑动)/fade(淡入淡出)
+      isAuto : true,  //是否自动轮播
+      list : $('#swiper ul li'), //轮播的内容
+      btnStatus : 'hover', //左右按钮显示的状态 always/hide/hover
+      spotsPosition : 'right' //下方小圆点位置 left/right/center
+    })
+  </script>
+</body>
+</html>
